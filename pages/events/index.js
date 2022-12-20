@@ -1,10 +1,10 @@
-const Page = () => {
+const EventsPage = () => {
   return (
     <div>
       <h1>Events Page</h1>
-      <a href="">
+      <a href="/events/london">
         <img />
-        <h2>Events in Berlin</h2>
+        <h2>Events in London</h2>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -17,7 +17,7 @@ const Page = () => {
           takimata sanctus est Lorem ipsum dolor sit amet.
         </p>
       </a>
-      <a href="">
+      <a href="/events/hamburg">
         <img />
         <h2>Events in Hamburg</h2>
         <p>
@@ -32,7 +32,7 @@ const Page = () => {
           takimata sanctus est Lorem ipsum dolor sit amet.
         </p>
       </a>
-      <a href="">
+      <a href="/events/vienna">
         <img />
         <h2>Events in Vienna</h2>
         <p>
@@ -51,4 +51,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default EventsPage;

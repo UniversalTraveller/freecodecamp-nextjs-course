@@ -81,3 +81,11 @@ export default function Home() {
     </>
   );
 }
+
+export function getServerSideProps() {
+  return {
+    props: {
+      title: "Hello everyone",
+    },
+  };
+}
