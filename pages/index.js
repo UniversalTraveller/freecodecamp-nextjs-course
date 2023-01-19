@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { HomePage } from "../src/components/home/home-page";
 import { Footer } from "../src/components/footer/footer";
+import { Header } from "../src/components/header/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,13 +17,8 @@ export default function Home({ data }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <nav>
-          <Link href="/"> Home</Link>
-          <Link href="/events"> Events</Link>
-          <Link href="/about-us"> About Us</Link>
-        </nav>
-      </header>
+
+      <Header />
       <HomePage data={data} />
       <Footer />
     </>
