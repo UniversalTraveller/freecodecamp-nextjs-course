@@ -1,7 +1,6 @@
 import SingleEvent from "../../../src/components/events/single-event";
 
 const EventPage = ({ data }) => {
-  console.log(data);
   return <SingleEvent data={data} />;
 };
 
