@@ -1,10 +1,14 @@
 header
   height: 300px
   padding: 50px
-  background: linear-gradient (305deg, #dbfff3, transparent)
-  display: flex
-  flex-direction: column
-  justify-content: space-between
+  background: #333
+  >div
+    width: 100%
+    max-width: 1250px
+    margin: auto
+    display: flex
+    flex-direction: column
+    justify-content: space-between
   h1
     width: 40%
     font-size: 40px
@@ -26,5 +30,29 @@ footer
   color: #fff
   padding: 10px
   text-align: center
+
+main
+  width: 100%
+  max-width: 1250px
+  margin: auto
+  padding: 100px 30px
+
+.home_body
+  display: flex
+  flex-direction: column
+  gap: 50px
+  .image
+    width: 100%
+  .card
+    display: flex
+    flex-direction: row
+    gap: 30px
+    justify-content: center
+    align-content: center
+    align-items: center
+    &:nth-child(even)
+      direction: rtl
+    .content
+      width: 50%
 
 
