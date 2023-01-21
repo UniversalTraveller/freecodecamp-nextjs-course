@@ -23,10 +23,33 @@ export default function handler(req, res) {
   // check if the format of the email is okay
 
   const filePath = buildPath();
-  const data = extractData(filePath);
+  const { events_categories, allEvents } = extractData(filePath);
+
+  if (!allEvents) {
+    return res.status(404).json({
+      status: 404,
+      message: "Events data not found!",
+    });
+  }
+
   if (method === "POST") {
     //we add our code here
     const { email, eventId } = req.body;
+
+    const newAllEvents = allEvents.map((ev) => {
+      if (ev.id === eventId) {
+        if (ev.email_registered.includes(email)) {
+          res
+            .status(201)
+            .json({ message: "This email has already been registered!" });
+        }
+        return {
+          ...ev,
+          email_registered: [...ev.email_registered, email],
+        };
+      }
+      return ev;
+    });
 
     res.status(200).json({
       message: `You have successfully registered with the email: ${email} ${eventId}`,
